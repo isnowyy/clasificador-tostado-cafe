@@ -34,10 +34,10 @@ apoyar el proceso.
 | Nombre                              | Rol (ejemplo)                     |
 |-------------------------------------|-----------------------------------|
 | Nicolás David Naranjo Barrios       | Desarrollo web / integración TF.js|
-| _[Compañero/a 2 — completar]_       | Dataset y entrenamiento           |
-| _[Compañero/a 3 — completar]_       | Documentación y análisis de errores|
+| Heiling                             | Dataset y entrenamiento           |
+| Keyner                              | Documentación y análisis de errores|
 
-> ✏️ Reemplaza los placeholders por los nombres reales de tus compañeros.
+> ✏️ Completa los apellidos de Heiling y Keyner si es necesario y ajusta los roles según su reparto real.
 
 ---
 
