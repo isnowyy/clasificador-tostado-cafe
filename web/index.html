@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clasificador de Tostado de Café ☕</title>
+  <link rel="stylesheet" href="styles.css" />
+
+  <!--
+    Librerías cargadas desde CDN oficial (no se usa bundler):
+    - @tensorflow/tfjs      -> motor de cómputo (tensores, WebGL, etc.)
+    - @teachablemachine/image -> capa que envuelve el modelo exportado
+                                 por Teachable Machine y facilita la webcam.
+    Se fijan versiones concretas para que la demo sea reproducible.
+  -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.22.0/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+</head>
+<body>
+  <header class="app-header">
+    <h1>☕ Clasificador de Nivel de Tostado de Café</h1>
+    <p class="subtitle">
+      Café colombiano · Teachable Machine + TensorFlow.js
+    </p>
+  </header>
+
+  <main class="app-main">
+    <!-- Columna de la cámara -->
+    <section class="camera-panel">
+      <div id="webcam-container" class="webcam-container">
+        <!-- El elemento <canvas> del webcam se inyecta aquí por JS -->
+        <div id="webcam-placeholder" class="webcam-placeholder">
+          <span>Pulsa «Iniciar» para activar la cámara</span>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button id="btn-start" class="btn btn-primary">▶ Iniciar</button>
+        <button id="btn-stop" class="btn btn-secondary" disabled>■ Detener</button>
+        <button id="btn-flip" class="btn btn-secondary" disabled>🔄 Cambiar cámara</button>
+      </div>
+
+      <p id="status" class="status">Modelo no cargado todavía.</p>
+    </section>
+
+    <!-- Columna de resultados -->
+    <section class="results-panel">
+      <h2>Predicción en tiempo real</h2>
+      <div id="label-container" class="label-container">
+        <!-- Las barras de probabilidad se generan dinámicamente en app.js -->
+        <p class="hint">Aquí aparecerán las 4 clases con su probabilidad.</p>
+      </div>
+
+      <div id="top-prediction" class="top-prediction" hidden>
+        <span class="top-label">Clase predicha:</span>
+        <span id="top-class" class="top-class">—</span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <p>
+      Proyecto académico de IA · La red no «ve» café: procesa números y patrones estadísticos.
+    </p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
