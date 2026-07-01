@@ -7,6 +7,13 @@ en tiempo real usando la webcam. El modelo se entrena con **Teachable Machine**
 
 > 🎓 Proyecto académico para el curso de Inteligencia Artificial.
 
+### 🌐 Demo en vivo
+
+**👉 [https://isnowyy.github.io/clasificador-tostado-cafe/](https://isnowyy.github.io/clasificador-tostado-cafe/)**
+
+Ábrela en el navegador (funciona en celular y PC). La cámara requiere aceptar el
+permiso; al servirse por `https` funciona sin problema. No necesitas instalar nada.
+
 ---
 
 ## 1. 📌 El problema y por qué importa en Colombia
@@ -276,10 +283,10 @@ Para que la web sea accesible por URL (y la cámara funcione sobre `https`):
 1. Sube el repositorio a GitHub.
 2. Ve a **Settings → Pages**.
 3. En **Source**, elige la rama (`main`) y la carpeta **`/root`**.
-4. Guarda. GitHub te dará una URL como
-   `https://tu-usuario.github.io/clasificador-tostado-cafe/`.
-5. Abre esa URL y navega a **`/web/`**:
-   `https://tu-usuario.github.io/clasificador-tostado-cafe/web/`
+4. Guarda. GitHub publicará el sitio en:
+   **`https://isnowyy.github.io/clasificador-tostado-cafe/`**
+5. La raíz redirige automáticamente a la app en **`/web/`** gracias al
+   `index.html` de la raíz, así que basta con abrir la URL anterior.
 
 > Como la app usa rutas relativas (`../model/model.json`), funciona correctamente
 > servida desde `/web/` con la carpeta `/model` en la raíz del repo.
